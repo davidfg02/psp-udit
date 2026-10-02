@@ -177,8 +177,8 @@ src/main/java/org/example/   → clase con el main (el monitor de UDITflix)
 README.md                    → este documento
 ```
 
-*(Ajusta la estructura a la de tu proyecto.)*
+
 
 ## 🔗 Enlace
 
-- GitHub: *[(tu repositorio)](https://github.com/davidfg02/psp-udit/tree/main/reto01-monitor-udiflix)*
+- GitHub: *(https://github.com/davidfg02/psp-udit/tree/main/reto01-monitor-udiflix)*
