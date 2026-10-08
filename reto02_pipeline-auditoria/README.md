@@ -317,14 +317,13 @@ Marca con honestidad, no con optimismo. Nadie te califica esta sección: es para
 | Por qué uso `&&` / `\|\|` en mi condición | ☐ | ☐ | X |
 | Cuándo se entra en el `catch` de `IOException` | ☐ | ☐ | X |
 
-**Mis predicciones del principio, ¿acerté?** *(explica por qué sí o por qué no)*
-*(escribe aquí)*
+**Mis predicciones del principio, ¿acerté?** *Sí*
 
 **Lo que haría diferente si empezara de nuevo:**
-*(escribe aquí)*
+*Empezaría probando cada proceso por separado antes de combinarlos, imprimiendo el código de salida de waitFor() desde el principio para ver qué devuelve cada uno*
 
 **Lo que todavía no tengo claro y quiero preguntar en clase:**
-*(escribe aquí)*
+*Tengo todo claro*
 
 ---
 
