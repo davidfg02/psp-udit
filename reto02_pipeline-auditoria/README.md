@@ -349,4 +349,4 @@ img                          → contiene las capturas de salida
 
 ## 🔗 Enlace
 
-GitHub: *(tu repositorio)*
+GitHub: *https://github.com/davidfg02/psp-udit/tree/main/reto02_pipeline-auditoria*
