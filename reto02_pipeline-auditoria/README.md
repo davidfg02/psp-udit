@@ -274,6 +274,13 @@ El Reto 1 lanzaba procesos **uno tras otro** dentro de un bucle. El Reto 2 los l
 **Si mañana el pipeline tuviera 50 comprobaciones en lugar de 2, ¿seguiría teniendo sentido mi estructura de código? ¿Qué cambiaría?**
 *No, ya que tendría que crear los 50 procesos a mano y combinar 50 condiciones con &&. Un bucle en lugar de código repetido. Un primer for lanzaría todos los procesos con start().*
 
+**Mundo real: ¿qué sistemas profesionales utilizan esta lógica de health checks (comprobaciones de estado de servicios)?**
+*Los health checks se utilizan en muchos sistemas profesionales para comprobar si los servidores, aplicaciones y servicios están funcionando correctamente.*
+
+**Reflexión sobre tus tiempos: viendo los tiempos que has medido, si auditaras 50 servidores lentos, ¿cuánto tardaría el programa de forma secuencial y cuánto en paralelo.**
+
+*Suponiendo que cada servidor tarda 3 segundos. En un aejecución secuencial, El programa tardaría aproximadamente 150 segundos. En una ejecución paralela, la auditoría tardaría aproximadamente 3 segundos*
+
 ---
 
 ## 🧠 Qué he aprendido
@@ -349,3 +356,4 @@ img                          → contiene las capturas de salida
 ## 🔗 Enlace
 
 GitHub: *https://github.com/davidfg02/psp-udit/tree/main/reto02_pipeline-auditoria*
+
