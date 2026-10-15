@@ -1,4 +1,3 @@
-
 package org.example;
 
 import java.io.*;
@@ -20,10 +19,10 @@ public class PipelineAuditoria {
             String linea;
 
             while ((linea = br.readLine()) != null) {
-                linea = linea.trim();
+                linea = linea.trim(); // Elimina los espacios en blanco al principio y al final de la línea
 
                 if (!linea.isEmpty()) {
-                    servidores.add(linea);
+                    servidores.add(linea); //Si la linea no está vacía, la añade a la lista
                     System.out.println("Servidor cargado: " + linea);
                 }
             }
@@ -32,7 +31,6 @@ public class PipelineAuditoria {
             e.printStackTrace();
             return;
         }
-
 
         ArrayList<Process> procesos = new ArrayList<>();
 
@@ -47,10 +45,7 @@ public class PipelineAuditoria {
             for (String ip : servidores) {
                 System.out.println("    -> Lanzando proceso a " + ip);
 
-                Process proceso = new ProcessBuilder(
-                        "ping", "-n", "1", "-w", "3000", ip
-                ).start();
-
+                Process proceso = new ProcessBuilder("ping", "-n", "1", "-w", "3000", ip).start();
                 procesos.add(proceso);
             }
 
@@ -69,29 +64,21 @@ public class PipelineAuditoria {
             System.out.println("Éxitos: " + contadorExitos);
             System.out.println("Fallos: " + contadorFallos);
 
-            // Decisión final
             if (contadorFallos == 0) {
                 new ProcessBuilder("notepad.exe").start();
-
             } else if (contadorExitos > 0 && contadorFallos > 0) {
                 new ProcessBuilder("calc.exe").start();
-
             } else {
                 new ProcessBuilder("explorer.exe").start();
             }
 
         } catch (IOException e) {
             System.out.println("Error: No se pudo lanzar el proceso.");
-
         } catch (InterruptedException e) {
             System.out.println("Error: El proceso se interrumpió.");
             Thread.currentThread().interrupt();
-
         }
-        System.out.println(
-                "Tiempo total: "
-                        + (System.currentTimeMillis() - inicio)
-                        + " ms"
-        );
+
+        System.out.println("Tiempo total: " + (System.currentTimeMillis() - inicio) + " ms");
     }
 }
